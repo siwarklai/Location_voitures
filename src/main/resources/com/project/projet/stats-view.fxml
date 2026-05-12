@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.project.projet.controller.StatsController" spacing="16" styleClass="content">
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Statistiques" styleClass="section-title" />
+        <Button text="Rafraichir" onAction="#onRefresh" />
+    </HBox>
+
+    <GridPane hgap="10" vgap="10" styleClass="card">
+        <padding>
+            <Insets top="12" right="12" bottom="12" left="12"/>
+        </padding>
+        <Label text="Total vehicules" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <Label fx:id="totalVehiculesLabel" text="0" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+        <Label text="Vehicules disponibles" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+        <Label fx:id="disponiblesLabel" text="0" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+        <Label text="Total reservations" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+        <Label fx:id="totalReservationsLabel" text="0" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+        <Label text="Chiffre d'affaires" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+        <Label fx:id="revenueLabel" text="0" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+        <Label text="Vehicule le plus loue" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+        <Label fx:id="topVehiculeLabel" text="-" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+        <Label text="Reservations par statut" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+        <Label fx:id="statusLabel" text="-" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+    </GridPane>
+</VBox>
